@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAG Sleaford — Kesteven Coffee Shop & Business Centre</title>
+<meta name="description" content="TAG Sleaford is home to Kesteven Coffee Shop and Kesteven Business Centre in Sleaford. Choose where you'd like to go.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1a17;
+    --muted:#6f675d;
+    --paper:#f6f1e9;
+    --line:rgba(28,26,23,.12);
+    --coffee-1:#8a5230;
+    --coffee-2:#bd7b46;
+    --centre-1:#1f3b3a;
+    --centre-2:#3a6b66;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Inter",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+
+  header{
+    text-align:center;
+    padding:54px 24px 30px;
+  }
+  .wordmark{
+    font-family:"Fraunces",serif;
+    font-weight:500;
+    letter-spacing:.16em;
+    font-size:14px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  header h1{
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    font-size:clamp(2.4rem,6vw,4.2rem);
+    line-height:1.02;
+    margin:14px 0 16px;
+    letter-spacing:-.02em;
+  }
+  header p{
+    max-width:560px;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:1.05rem;
+    line-height:1.6;
+  }
+
+  main{
+    flex:1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    max-width:1080px;
+    width:100%;
+    margin:34px auto 0;
+    padding:0 24px 24px;
+  }
+  .card{
+    position:relative;
+    border-radius:var(--radius);
+    overflow:hidden;
+    min-height:460px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:34px;
+    color:#fff;
+    isolation:isolate;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+    box-shadow:0 12px 30px -18px rgba(0,0,0,.5);
+  }
+  .card::before{
+    content:"";
+    position:absolute;inset:0;z-index:-2;
+    transition:transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+  .card::after{
+    content:"";
+    position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 100%);
+  }
+  .card.coffee::before{background:radial-gradient(120% 120% at 20% 10%,var(--coffee-2),var(--coffee-1) 55%,#5e371f 100%);}
+  .card.centre::before{background:radial-gradient(120% 120% at 80% 10%,var(--centre-2),var(--centre-1) 60%,#142625 100%);}
+  .card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -22px rgba(0,0,0,.6);}
+  .card:hover::before{transform:scale(1.06);}
+
+  .tag{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    opacity:.85;margin-bottom:12px;font-weight:600;
+  }
+  .card h2{
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    font-size:clamp(1.7rem,3vw,2.3rem);
+    line-height:1.05;
+    margin-bottom:10px;
+  }
+  .card p{
+    font-size:1rem;line-height:1.55;opacity:.92;max-width:34ch;margin-bottom:22px;
+  }
+  .go{
+    display:inline-flex;align-items:center;gap:10px;
+    font-weight:600;font-size:.95rem;
+    padding:13px 22px;border-radius:999px;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.32);
+    backdrop-filter:blur(6px);
+    align-self:flex-start;
+    transition:background .25s,gap .25s;
+  }
+  .card:hover .go{background:rgba(255,255,255,.26);gap:16px;}
+  .go svg{width:16px;height:16px}
+
+  .icon{
+    position:absolute;top:30px;left:34px;z-index:3;
+    width:42px;height:42px;opacity:.92;
+  }
+  .card .tag,.card h2,.card p,.card .go{position:relative;z-index:2}
+  .scene{position:absolute;left:0;right:0;top:18px;width:100%;height:66%;z-index:1;opacity:.16;pointer-events:none}
+  .card:hover .scene{opacity:.22;transition:opacity .35s}
+
+  footer{
+    text-align:center;
+    padding:26px 24px 40px;
+    color:var(--muted);
+    font-size:.85rem;
+    border-top:1px solid var(--line);
+    margin-top:8px;
+  }
+  footer a{text-decoration:underline;text-underline-offset:3px}
+
+  @media(max-width:720px){
+    main{grid-template-columns:1fr;}
+    .card{min-height:340px;}
+    header{padding:42px 22px 18px;}
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="wordmark">TAG&nbsp;Sleaford&nbsp;&middot;&nbsp;Lincolnshire</div>
+    <h1>One address.<br>Two destinations.</h1>
+    <p>Whether you're here for a flat white or a place to grow your business, you're in the right spot. Choose where you'd like to go.</p>
+  </header>
+
+  <main>
+    <a class="card coffee" href="https://coffee.tagsleaford.com">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+      <svg class="scene" viewBox="0 0 400 280" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet">
+        <path d="M175 78 q-14 -16 0 -32 q14 -16 0 -32" opacity=".75"/>
+        <path d="M205 78 q-14 -16 0 -32 q14 -16 0 -32" opacity=".75"/>
+        <path d="M235 78 q-14 -16 0 -32 q14 -16 0 -32" opacity=".75"/>
+        <path d="M138 96 h132 v62 a44 44 0 0 1 -44 44 h-44 a44 44 0 0 1 -44 -44 z"/>
+        <path d="M270 108 h26 a24 24 0 0 1 0 48 h-26"/>
+        <path d="M116 218 h168"/>
+        <ellipse cx="86" cy="250" rx="17" ry="10.5" transform="rotate(-28 86 250)"/>
+        <path d="M77 250 q9 3 18 0" transform="rotate(-28 86 250)"/>
+        <ellipse cx="322" cy="252" rx="17" ry="10.5" transform="rotate(22 322 252)"/>
+        <path d="M313 252 q9 3 18 0" transform="rotate(22 322 252)"/>
+      </svg>
+      <div class="tag">The Coffee Shop</div>
+      <h2>Kesteven Coffee Shop</h2>
+      <p>Speciality coffee, fresh food and a warm room to slow down in. Eat in or order on Uber Eats.</p>
+      <span class="go">Visit the café
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+
+    <a class="card centre" href="https://centre.tagsleaford.com">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-3"/><line x1="9" y1="9" x2="9" y2="9"/><line x1="9" y1="12" x2="9" y2="12"/><line x1="9" y1="15" x2="9" y2="15"/></svg>
+      <svg class="scene" viewBox="0 0 400 280" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet">
+        <path d="M60 252 V250"/>
+        <path d="M40 252 h320"/>
+        <path d="M70 250 V150 h78 v100"/>
+        <path d="M148 250 V92 h104 v158"/>
+        <path d="M252 250 V176 h78 v74"/>
+        <g opacity=".82">
+          <path d="M92 172 h34 M92 196 h34 M92 220 h34"/>
+          <path d="M170 116 h60 M170 144 h60 M170 172 h60 M170 200 h60 M170 228 h60"/>
+          <path d="M200 108 V250"/>
+          <path d="M274 198 h34 M274 222 h34"/>
+        </g>
+      </svg>
+      <div class="tag">The Business Centre</div>
+      <h2>Kesteven Business Centre</h2>
+      <p>Private offices and workspace to rent in the heart of Sleaford. Flexible terms, ready to move in.</p>
+      <span class="go">View offices
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+  </main>
+
+  <footer>
+    TAG Sleaford Ltd &middot; Sleaford, Lincolnshire<br>
+    &copy; <span id="yr"></span> TAG Sleaford Ltd. All rights reserved.
+  </footer>
+
+  <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

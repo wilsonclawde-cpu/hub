@@ -1,0 +1,10 @@
+<svg width="620" height="120" viewBox="0 0 620 120" xmlns="http://www.w3.org/2000/svg">
+<title>TAG Sleaford</title>
+<circle cx="60" cy="60" r="46" fill="#1c1a17"/>
+<circle cx="60" cy="60" r="39" fill="none" stroke="#bd7b46" stroke-width="1.6"/>
+<text x="60" y="70" text-anchor="middle" font-family="Georgia, 'Liberation Serif', 'DejaVu Serif', serif" font-size="26" font-weight="700" letter-spacing="2" fill="#f6f1e9">TAG</text>
+<path d="M126 30 L126 90" stroke="#d8cfc2" stroke-width="1.5"/>
+<text x="148" y="66" font-family="Georgia, 'Liberation Serif', 'DejaVu Serif', serif" font-size="38" font-weight="700" letter-spacing="2" fill="#1c1a17">TAG SLEAFORD</text>
+<text x="150" y="92" font-family="'Helvetica Neue', 'Liberation Sans', Arial, sans-serif" font-size="12" letter-spacing="4.6" fill="#8a5230">COFFEE &#183; OFFICES &#183; BUSINESS SERVICES</text>
+</svg>
+

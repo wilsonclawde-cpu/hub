@@ -68,6 +68,7 @@ h1,h2,h3,.display{font-family:var(--display);font-weight:800;letter-spacing:-.03
 .hero h1 .line>span{display:block;transform:translateY(110%);animation:rise .9s var(--ease) forwards}
 .hero h1 .line:nth-child(2)>span{animation-delay:.12s}
 .hero h1 .line:nth-child(3)>span{animation-delay:.24s}
+.hero h1 .h1-kicker{font-size:.3em;font-weight:600;letter-spacing:-.01em;line-height:1.2;color:var(--muted-dark);margin-top:.5em}
 @keyframes rise{to{transform:none}}
 .hero .em{position:relative;display:inline-block;color:#fff}
 .hero .em::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.08em;background:var(--accent);transform:scaleX(0);transform-origin:left;animation:draw .8s var(--ease) .7s forwards}
@@ -186,7 +187,7 @@ details[open] summary::after{transform:rotate(45deg);background:var(--accent);co
 footer{background:var(--ink);color:var(--muted-dark);padding:72px 0 120px;position:relative;overflow:hidden}
 .foot-mark{font-family:var(--display);font-weight:800;font-size:clamp(3.4rem,13vw,12rem);line-height:.85;letter-spacing:-.06em;color:var(--ink-2);margin:0 0 40px;user-select:none}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;font-size:.95rem}
-.foot-col h4{font-family:var(--display);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.foot-col h3,.foot-col .foot-h{font-family:var(--display);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 .foot-col a{display:block;padding:4px 0;color:#fff;transition:color .2s}
 .foot-col a:hover{color:var(--accent)}
 .foot-brand{color:#fff;font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:-.03em;margin-bottom:10px}

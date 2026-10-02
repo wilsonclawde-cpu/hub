@@ -98,6 +98,10 @@ h1,h2,h3,.display{font-family:var(--display);font-weight:800;letter-spacing:-.03
 .door p{max-width:44ch;color:rgba(255,255,255,.82);font-size:1.02rem;margin-bottom:22px}
 .door .btn{align-self:flex-start;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:#fff;backdrop-filter:blur(8px)}
 .door:hover .btn{background:var(--accent);border-color:var(--accent);color:var(--ink);gap:16px}
+.door-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px 24px}
+.door .door-link::after{content:"";position:absolute;inset:0;z-index:1}
+.door-more{position:relative;z-index:2;font-family:var(--display);font-weight:700;font-size:.92rem;color:#fff;opacity:.85;border-bottom:1.5px solid rgba(255,255,255,.35);padding-bottom:2px;transition:color .2s,border-color .2s,opacity .2s}
+.door-more:hover{color:var(--accent);border-color:var(--accent);opacity:1}
 @media(max-width:760px){.doors{flex-direction:column;min-height:0}.door{min-height:62vh}.door:hover{flex:1 1 0}.door::after{top:auto;bottom:0;left:0;right:0;width:auto;height:1px}}
 
 /* ---------- Marquee ---------- */

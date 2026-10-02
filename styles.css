@@ -63,7 +63,7 @@ h1,h2,h3,.display{font-family:var(--display);font-weight:800;letter-spacing:-.03
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,12,16,.35) 0%,rgba(11,12,16,.55) 55%,var(--ink) 100%)}
 @keyframes kb{from{transform:scale(1)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
 .hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end}
-.hero h1{font-size:clamp(3.1rem,9.2vw,8.4rem);line-height:.92;margin:22px 0 28px;letter-spacing:-.045em}
+.hero h1{font-size:clamp(3.1rem,9.2vw,7.2rem);line-height:.92;margin:22px 0 28px;letter-spacing:-.045em}
 .hero h1 .line{display:block;overflow:hidden}
 .hero h1 .line>span{display:block;transform:translateY(110%);animation:rise .9s var(--ease) forwards}
 .hero h1 .line:nth-child(2)>span{animation-delay:.12s}
